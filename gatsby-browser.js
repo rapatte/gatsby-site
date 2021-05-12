@@ -7,6 +7,6 @@ import "typeface-roboto"
 import "./src/css/normalize.css"
 
 // custom CSS styles
-import "./src/css/style.css"
+import "./src/css/style.scss"
 
 // require("typeface-open-sans")

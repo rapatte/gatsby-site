@@ -6,9 +6,11 @@ import Sidebar from "./Sidebar"
 const Layout = ({ isHomePage, children }) => {
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
-      <Header isHomePage={isHomePage}/>
-      <main>{children}</main> 
-      <Sidebar />
+      <Header isHomePage={isHomePage}/>      
+      <div className="main-sidebar-wrapper" style={{display:"flex"}}>
+        <main className="homepage-main">{children}</main> 
+        <Sidebar />
+      </div> 
       <Footer />
     </div>
   )

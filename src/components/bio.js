@@ -41,7 +41,7 @@ const Bio = () => {
           {/* Written by <strong>{author.firstName}.</strong> */}
           {` `}
           {/* {author?.description || null} */}
-          {"Someone is a frontend developer and trainer. He goes Jamstack with WordPress. Come and join him. " || null}
+          Someone is a frontend developer and trainer.<br/>He goes Jamstack with WordPress. Come and join him.
         </p>
       )}
     </div>

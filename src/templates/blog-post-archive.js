@@ -26,10 +26,8 @@ const BlogIndex = ({
   }
 
   return (
-    <Layout isHomePage>
+      <Layout isHomePage>
       <Seo title="All posts" />
-
-      <Bio />
 
       <ol className="posts-container" style={{ listStyle: `none` }}>
         {posts.map(post => {
@@ -64,7 +62,7 @@ const BlogIndex = ({
         </>
       )}
       {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
-    </Layout>
+    </Layout>    
   )
 }
 

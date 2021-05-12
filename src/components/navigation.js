@@ -14,7 +14,7 @@ const Navigation = () => {
         }
       }`)
       const menuItems = data.wpMenu.menuItems.nodes
-    return (    
+    return (
         <nav>
             <ul>
                 {menuItems.map(el => {

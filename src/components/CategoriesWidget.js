@@ -15,7 +15,7 @@ const CategoriesWidget = () => {
         }
       }`)
       const categories = 
-        <ul>
+        <ul> 
           {data.allWpCategory.edges.map(el => {
               return el.node.count !== null && <li key={el.node.id}><Link to={el.node.uri}>{el.node.name}</Link> ({el.node.count} posts)</li>
           })}

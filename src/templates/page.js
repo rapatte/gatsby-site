@@ -13,6 +13,15 @@ import "../css/@wordpress/block-library/build-style/theme.css"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Footer from "../components/footer"
+
+//  function addLineBreak(element)  {
+
+//      const br = document.createElement("br");
+//      const target = document.querySelector(element);
+//      target.appendChild(br);
+//  } 
+//  addLineBreak("<p></p>") 
 
 const PageTemplate = ({ data: { page } }) => {
   return (
@@ -33,10 +42,6 @@ const PageTemplate = ({ data: { page } }) => {
         )}
 
         <hr />
-
-        <footer>
-          <Bio />
-        </footer>
       </article>
     </Layout>
   )

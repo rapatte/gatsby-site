@@ -55,21 +55,29 @@ const RecentPostsWidget = props => {
   // }
   
   const data = useStaticQuery(graphql`query RecentPostsQuery {
-    allWpPost(sort: {fields: date, order: DESC}, limit: 4) {
+    allWpPost(sort: {fields: date, order: DESC}, limit: 5) {
       edges {
         node {
           id
           date(fromNow: true)
           title
           uri
+          author {
+            node {
+              name
+            }
+          }
         }
       }
     }
   }`)
+  
+  
+
   const recentPosts = 
         <ul>
           {data.allWpPost.edges.map(el => {
-              return <li key={el.node.id}><Link to={el.node.uri}>{el.node.title}</Link> posted {el.node.date}</li>
+              return <li key={el.node.id}><Link to={el.node.uri}>{el.node.title}</Link> <br/>posted {el.node.date} by {el.node.author.node.name}</li>
           })}
         </ul>
   return (
@@ -88,8 +96,7 @@ const RecentPostsWidget = props => {
     //     </Link>
     //     </h2>
     //   </ul>
-    // </div>
-    
+    // </div>    
   )
 }
 
