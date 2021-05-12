@@ -15,6 +15,7 @@ const Header = (props) => {
     }
   `)
   const title = data.wp.generalSettings.title
+  const description = data.wp.generalSettings.description
   return(
     <header className="global-header">
     {isHomePage ? (
@@ -26,6 +27,7 @@ const Header = (props) => {
         {title}
       </Link>
     )}
+    <p>{description}</p>
     <Navigation />
   </header>
   )

@@ -31,7 +31,7 @@ const BlogIndex = ({
 
       <Bio />
 
-      <ol style={{ listStyle: `none` }}>
+      <ol className="posts-container" style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.title
 

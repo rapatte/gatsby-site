@@ -31,14 +31,17 @@ const Bio = () => {
         <img
           alt={author?.firstName || ``}
           className="bio-avatar"
-          src={avatarUrl}
+          // src={avatarUrl}
+          src={"/userAvatar.jpg"}
         />
       )}
       {author?.firstName && (
         <p>
-          Written by <strong>{author.firstName}.</strong>
+          Written by <strong>Someone.</strong>
+          {/* Written by <strong>{author.firstName}.</strong> */}
           {` `}
-          {author?.description || null}
+          {/* {author?.description || null} */}
+          {"Someone is a frontend developer and trainer. He goes Jamstack with WordPress. Come and join him. " || null}
         </p>
       )}
     </div>
