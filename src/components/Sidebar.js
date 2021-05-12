@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import RecentPostsWidget from "./RecentPostsWidget"
-import PostsWidget from "./PostsWidget"
 import CategoriesWidget from "./CategoriesWidget"
+import TagsWidget from './TagsWidget'
 // import CategoriesWidget from "./"
 
 const Sidebar = props => {
@@ -31,7 +31,7 @@ const Sidebar = props => {
         {/* <Link className="" to="/posts">
           Posts{" "}
         </Link> */}
-        <PostsWidget />{" "}
+        <TagsWidget />{" "}
         {/* <Link className="" to="/categories">
           Categories
         </Link> */}

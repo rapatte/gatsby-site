@@ -9,20 +9,22 @@ const CategoriesWidget = () => {
               id
               name
               uri
+              count
             }
           }
         }
       }`)
-      console.log(data.allWpCategory.edges);
-      const categories = data.allWpCategory.edges.map(el => {
-          return <li>{el.node.name}</li>
-      })
+      const categories = 
+        <ul>
+          {data.allWpCategory.edges.map(el => {
+              return el.node.count !== null && <li key={el.node.id}><Link to={el.node.uri}>{el.node.name}</Link> ({el.node.count} posts)</li>
+          })}
+        </ul>
+
     return(
       <div>
         <h2>Categories</h2>
-        <ul>
           {categories}
-        </ul>
       </div>        
     )
 }
