@@ -14,12 +14,11 @@ const Navigation = () => {
         }
       }`)
       const menuItems = data.wpMenu.menuItems.nodes
-      console.log(menuItems);
     return (    
         <nav>
             <ul>
                 {menuItems.map(el => {
-                    return <li key={el.id}><Link  to={el.url}>{el.label}</Link></li>
+                    return <li key={el.id}><Link href={el.url}>{el.label}</Link></li>
                 })}
             </ul>
         </nav>
